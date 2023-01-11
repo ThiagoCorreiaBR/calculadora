@@ -29,8 +29,17 @@ class CalculadoraController extends Controller
     {
         $num1 = $request -> num1;
         $num2 = $request -> num2;
+        $operador = $request -> operador;
 
-        $soma = $num1+$num2;
+        if($operador=="+"){
+            $soma = $num1+$num2;
+        }else if($operador=="-"){
+            $soma = $num1-$num2;
+        }else if($operador=="*"){
+            $soma = $num1*$num2;
+        }else if($operador=="/"){
+            $soma = $num1/$num2;
+        }
 
         return view('soma',compact('soma'));
     }
