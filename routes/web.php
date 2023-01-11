@@ -1,5 +1,6 @@
 <?php
  
+use App\Http\Controllers\pokemon;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CalculadoraController;
@@ -23,3 +24,5 @@ Route::get('/soma/{num1}/{num2}',[CalculadoraController::class, 'soma']);
 
 Route::get('/calculadora',[CalculadoraController::class,'calculadora']);
 Route::post('/calcular',[CalculadoraController::class, 'calcular']);
+
+Route::get('/pokemon/{nome}',[pokemon::class, 'pokemon']);
