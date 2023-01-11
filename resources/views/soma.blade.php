@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h3>A soma é: {{ $soma }}</h3>
+    <h2>A soma é: {{ $soma }}</h2>
 </body>
 </html>
